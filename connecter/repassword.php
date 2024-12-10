@@ -101,17 +101,17 @@ $mail = new PHPMailer(true);
 
 try {
     // Server settings
-    $mail->isSMTP();                                            // 使用 SMTP
-    $mail->Host       = 'smtp.qq.com';                          // 设置 SMTP 服务器
-    $mail->SMTPAuth   = true;                                   // 启用 SMTP 认证
-    $mail->Username   = 'your Email';                // SMTP 用户名 (你的 QQ 邮箱地址)
-    $mail->Password   = 'your password';              // SMTP 密码 (你在 QQ 邮箱设置里获取的授权码)
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // 启用 TLS 加密
-    $mail->Port       = 587;                                    // TCP 端口连接到
+    $mail->isSMTP();                                            // Utiliser SMTP
+    $mail->Host       = 'smtp.gmail.com';                          // Définir le serveur SMTP
+    $mail->SMTPAuth   = true;                                   // Activer l'authentification SMTP
+    $mail->Username   = 'your Email';                // Nom d'utilisateur SMTP
+    $mail->Password   = 'your password';              // Mot de passe SMTP (code d'autorisation dans les paramètres Gmail）
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Activer le chiffrement TLS
+    $mail->Port       = 587;                                    // Port TCP
 
     // Recipients
-    $mail->setFrom('your Email', 'Your Name');       // 发件人信息
-    $mail->addAddress($user['email'], $user['first_name'] . ' ', $user['last_name']); // 收件人信息
+    $mail->setFrom('your Email', 'Your Name');       // INFO ENVAYEUR
+    $mail->addAddress($user['email'], $user['first_name'] . ' ', $user['last_name']); // INFO RECU
 
     // Content
     $mail->isHTML(true);                                        // 设置邮件格式为 HTML
