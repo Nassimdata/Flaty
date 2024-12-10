@@ -10,6 +10,7 @@
 <body>
     <div style="width: 100%;">
         <div class="form">
+            <form method="post" action="login.php">
             <div style="display: flex;align-items: center;">
                 <div style="flex: 1;">
                     <img src="img/logo.png" style="width: 60px;height: 60px;" />
@@ -20,17 +21,21 @@
 
             </div>
             <div>
-                <input class="input" type="text" placeholder="ldentifiant" />
+                <input class="input" type="text" placeholder="ldentifiant" name="email" />
 
             </div>
             <div style="margin-top: 20px;">
-                <input class="input" type="text" placeholder="Mot de passe" />
+                <input class="input" type="password" placeholder="Mot de passe" name="password" />
             </div>
 
             <div style="margin-top: 20px;margin-left: 58px;color: #48B3F7;">
                 <div><a href="repassword.html">Mot de passe oublié ?</a> </div>
                 <div style="margin-top: 7px;"><a href="register.html">Pas de compte ?</a></div>
+                <br><br>
+                <div><button class="enregistrer" type="submit">Enregistrer</button></div>
+                
             </div>
+        </form>
         </div>
 
     </div>
@@ -60,6 +65,15 @@
     a {
         text-decoration: none;
         color: #48B3F7;
+    }
+    .enregistrer {
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        background-color: black;
+        border-radius: 30px;
+        border: 1px solid grey;
+        color: #fff;
     }
 </style>
 

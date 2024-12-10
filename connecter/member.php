@@ -1,3 +1,9 @@
+<?php
+session_start();
+$user = $_SESSION['user'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,47 +15,28 @@
 
 <body>
     <div style="width: 100%;">
-        <form method="post" action="register.php">
+        
             <div class="form">
                 <div style="display: flex;align-items: center;justify-content: flex-start;">
                     <div style="flex: 1;">
                         <img src="img/logo.png" style="width: 80px;height: 80px;" />
                     </div>
                 </div>
-                <div style="font-size: 23px;font-weight: 700;margin: 15px 0;">Commencons !</div>
-                <div style="font-size: 14px;margin: 15px 0;">Veuillez remplir les informations ci-dessous :
+                <div style="font-size: 23px;font-weight: 700;margin: 15px 0;">Bienvenue à!</div>
+                <div style="font-size: 14px;margin: 15px 0;"><?php echo $user['first_name'].' '.$user['last_name'];?>
                 </div>
 
                 <div style="margin-top: 20px;">
-                    <input class="input" type="text" placeholder="Nom" name="first_name" />
+                    <label>E-mail：</label><?php echo  $user['email'];?>
                 </div>
 
                 <div style="margin-top: 20px;">
-                    <input class="input" type="text" placeholder="Prénom*" name="last_name" />
+                <label>téléphone：</label><?php echo $user['telphone'];?>
                 </div>
 
                 <div style="margin-top: 20px;">
-                    <input class="input" type="text" placeholder="Numéro de téléphone*" name="telphone" />
+                <label>Enregistré chez：</label><?php echo $user['created_at'];?>
                 </div>
-
-                <div style="margin-top: 20px;">
-                    <input class="input" type="text" placeholder="Mot de passe*" name="password" />
-                </div>
-
-                <div style=" margin-top: 20px;">
-                    <input class="input" type="text" placeholder="e-mail*" name="email" />
-                </div>
-
-                <div style=" margin-top: 20px;color:#52B3F7;font-size: 12px;">
-                    Vous avez déjà un compte? Connectez-vous
-                </div>
-
-                <div style="display: flex;justify-content: flex-end;margin-top: 50px;">
-                    <div><a href="login.html"><button class="annuler">Annuler</button></a>
-                    </div>
-                    <div><button class="enregistrer" type="submit">Enregistrer</button></div>
-                </div>
-        </form>
     </div>
 
     </div>
