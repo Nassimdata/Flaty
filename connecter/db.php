@@ -9,9 +9,9 @@ class DB
     static private $config = [
         'db_host' => '127.0.0.1',
         'db_port' => '3306',
-        'db_name' => 'test',
+        'db_name' => 'flaty',
         'db_user' => 'root',
-        'db_pass' => 'root',
+        'db_pass' => '123456',
     ];
 
     private function __construct() {}
